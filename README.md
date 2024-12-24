@@ -1,5 +1,5 @@
 # School-management-system-main
- A School Management System with access of different authorities
+ A School Management System with access of different authorities and a **facial recognition system**
 **Student Management**: Add, update, and maintain student records, including personal details, attendance, and performance.
 **Teacher Management**: Manage teacher profiles, schedules, and assignments.
 **Class and Timetable Management**: Create, view, and modify class schedules and timetables.
