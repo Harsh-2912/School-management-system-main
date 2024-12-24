@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div id="teacher-dashboard">
+        <div class="sidebar">
+            <h2>Teacher Dashboard</h2>
+            <ul>
+                <li><a href="#profile" class="nav-link">Profile Overview</a></li>
+                <li><a href="#class-schedule" class="nav-link">Class Schedule</a></li>
+                <li><a href="#attendance" class="nav-link">Attendance</a></li>
+                <li><a href="#grades" class="nav-link">Grades and Assessments</a></li>
+                <li><a href="#assignments" class="nav-link">Assignments</a></li>
+                <li><a href="#leave-requests" class="nav-link">Leave Requests</a></li>
+                <li><a href="#notifications" class="nav-link">Notifications</a></li>
+                <li><a href="#messages" class="nav-link">Messages</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+            </ul>
+            <!-- Logout Button -->
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+        <div class="main-content">
+            <!-- Profile Overview -->
+            <div id="profile" class="section active">
+                <h2>Profile Overview</h2>
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <!-- You can add a profile picture here -->
+                            <img src="profile-photo.jpeg" alt="Profile Picture">
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">Jane Smith</h3>
+                            <p class="profile-id">Employee ID: T123456</p>
+                            <p class="profile-department">Department: Mathematics</p>
+                            <p class="profile-email">Email ID: jane.smith@example.com</p>
+                            <p class="profile-phone">Phone: +1234567890</p>
+                            <!-- Add more details if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Class Schedule -->
+        <div id="class-schedule" class="section">
+            <h2>Class Schedule</h2>
+            <div class="schedule-container">
+            <div class="schedule-header">
+                <button class="view-toggle" data-view="weekly">Weekly View</button>
+                <button class="view-toggle" data-view="monthly">Monthly View</button>
+            </div>
+            <div id="schedule-view" class="schedule-view">
+            <!-- Weekly View -->
+            <div id="weekly-view" class="schedule-view-content">
+                <h3>Weekly Schedule</h3>
+                <div class="schedule-grid">
+                    <!-- Example for a week schedule -->
+                    <div class="schedule-day">
+                        <h4>Monday</h4>
+                        <p>9:00 AM - 10:00 AM: Mathematics : Class 1 A</p>
+                        <p>10:00 AM - 11:00 AM: Physics : Class 2 C</p>
+                    </div>
+                    <div class="schedule-day">
+                        <h4>Tuesday</h4>
+                        <p>9:00 AM - 10:00 AM: Chemistry : Class 3 A</p>
+                        <p>10:00 AM - 11:00 AM: Biology : Class 1 B</p>
+                    </div>
+                    <div class="schedule-day">
+                        <h4>Wednesday</h4>
+                        <p>9:00 AM - 10:00 AM: Mathematics : Class 1 B</p>
+                        <p>10:00 AM - 11:00 AM: Physics : Class 2 A</p>
+                    </div>
+                    <div class="schedule-day">
+                        <h4>Thursday</h4>
+                        <p>9:00 AM - 10:00 AM: Chemistry : Class 4 C</p>
+                        <p>10:00 AM - 11:00 AM: Biology : Class 1 A</p>
+                    </div>
+                    <div class="schedule-day">
+                        <h4>Friday</h4>
+                        <p>9:00 AM - 10:00 AM: Mathematics : Class 1 C</p>
+                        <p>10:00 AM - 11:00 AM: Physics : Class 3 A</p>
+                    </div>
+                    <div class="schedule-day">
+                        <h4>Saturday</h4>
+                        <p>9:00 AM - 10:00 AM: Chemistry : Class 2 A</p>
+                        <p>10:00 AM - 11:00 AM: Biology : Class 1 B</p>
+                    </div>
+                    <!-- Add other days -->
+                </div>
+            </div>
+
+            <!-- Monthly View -->
+            <div id="monthly-view" class="schedule-view-content">
+    <h3>Monthly Schedule</h3>
+        <div class="calendar">
+        <div class="calendar-header">
+            <button class="nav-button prev-month">&lt;</button>
+            <h4 class="month-year">August 2024</h4>
+            <button class="nav-button next-month">&gt;</button>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-header-row">
+                <div class="calendar-day-name">Sun</div>
+                <div class="calendar-day-name">Mon</div>
+                <div class="calendar-day-name">Tue</div>
+                <div class="calendar-day-name">Wed</div>
+                <div class="calendar-day-name">Thu</div>
+                <div class="calendar-day-name">Fri</div>
+                <div class="calendar-day-name">Sat</div>
+            </div>
+            <div id="calendar-days" class="calendar-day-grid">
+                <!-- Days will be inserted here dynamically -->
+            </div>
+        </div>
+        </div>
+            </div>
+</div>
+            </div>
+        </div>
+
+ <!-- Attendance Management -->
+<div id="attendance" class="section">
+    <h2>Attendance Management</h2>
+    <p>Select a class and section to mark attendance.</p>
+
+    <!-- Class and Section Selection -->
+    <div class="attendance-controls">
+        <select id="select-class">
+            <option value="">Select Class</option>
+            <option value="class-1">Class 1</option>
+            <option value="class-2">Class 2</option>
+            <option value="class-2">Class 3</option>
+            <!-- Add more classes as needed -->
+        </select>
+        <select id="select-section">
+            <option value="">Select Section</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <button id="apply-filters">Apply</button>
+    </div>
+
+    <!-- Camera Section -->
+    <div id="camera-section" style="display: none;">
+        <h3>Face Recognition Attendance</h3>
+        <video id="camera-feed" width="640" height="480" autoplay></video>
+        <button id="capture-button">Capture</button>
+        <!-- Additional controls for date and submit -->
+        <div class="attendance-controls">
+            <label for="attendance-date">Date:</label>
+            <input type="date" id="attendance-date" required />
+            <button id="submit-attendance">Submit Attendance</button>
+        </div>
+    </div>
+</div>
+
+            
+
+            <!-- Grades and Assessments -->
+            <div id="grades" class="section">
+                <h2>Grades and Assessments</h2>
+                <p>Select a class, section, subject, and assessment type to manage grades and assessments.</p>
+            
+                <!-- Class, Section, Subject, and Assessment Selection -->
+                <div class="grades-controls">
+                    <select id="select-grade-class">
+                        <option value="">Select Class</option>
+                        <option value="class-1">Class 1</option>
+                        <option value="class-2">Class 2</option>
+                        <!-- Add more classes as needed -->
+                    </select>
+                    <select id="select-grade-section">
+                        <option value="">Select Section</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                    <select id="select-subject">
+                        <option value="">Select Subject</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Science">Science</option>
+                        <option value="English">English</option>
+                        <option value="History">History</option>
+                    </select>
+                    <select id="select-assessment">
+                        <option value="">Select Assessment Type</option>
+                        <option value="Assignment">Assignment</option>
+                        <option value="Class Test">Class Test</option>
+                        <option value="Mid-Term">Mid-Term</option>
+                        <option value="Final Exam">Final Exam</option>
+                    </select>
+                    <button id="apply-grade-filters">Apply</button>
+                </div>
+            
+                <!-- Search and Submit Controls -->
+                <div id="grade-tools" class="grades-controls" style="display: none;">
+                    <input type="text" id="search-grade-student" placeholder="Search student..." />
+                    <button id="submit-grades">Submit Grades</button>
+                </div>
+            
+                <!-- Grades Table -->
+                <table id="grades-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grades-table-body">
+                        <!-- Rows will be added dynamically by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+
+
+
+<!-- Assignments Section -->
+<div id="assignments" class="section">
+    <h2>Assignments</h2>
+    <p>Submit and review assignments here.</p>
+
+    <!-- Teacher Upload Assignment -->
+    <div class="upload-assignment">
+        <h3>Upload New Assignment</h3>
+        <form id="upload-assignment-form">
+            <label for="assignment-title">Assignment Title:</label>
+            <input type="text" id="assignment-title" placeholder="Enter Assignment Title" required>
+            
+            <label for="assignment-file">Upload PDF:</label>
+            <input type="file" id="assignment-file" accept=".pdf" required>
+            
+            <button type="submit">Upload Assignment</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Student Submissions -->
+    <div class="student-submissions">
+        <h3>Student Submissions</h3>
+        <div id="submission-list">
+            <!-- Student submissions will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+
+
+            <!-- Leave Requests -->
+<!-- Leave Requests -->
+<div id="leave-requests" class="section">
+    <h2>Leave Requests</h2>
+    <p>Manage and review leave requests here.</p>
+
+    <!-- Leave Request Form -->
+    <div id="leave-request-form">
+        <h3>Submit Leave Request</h3>
+        <form id="leave-request">
+            <label for="request-date">Date:</label>
+            <input type="date" id="request-date" required>
+            
+            <label for="leave-type">Leave Type:</label>
+            <select id="leave-type" required>
+                <option value="">Select Leave Type</option>
+                <option value="sick">Sick Leave</option>
+                <option value="personal">Personal Leave</option>
+                <option value="vacation">Vacation</option>
+                <!-- Add more leave types if needed -->
+            </select>
+            
+            <label for="reason">Reason:</label>
+            <textarea id="reason" rows="4" required></textarea>
+            
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- Leave Requests Table -->
+    <div id="leave-requests-table">
+        <h3>Pending Leave Requests</h3>
+        <table id="requests-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Leave Type</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="requests-table-body">
+                <!-- Leave requests will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+            <!-- Notifications -->
+<div id="notifications" class="section">
+    <h2>Notifications</h2>
+    <div class="filter-notifications">
+        <label for="notification-filter">Filter by Category:</label>
+        <select id="notification-filter">
+            <option value="">All</option>
+            <option value="update">Curriculum Updates</option>
+            <option value="meeting">Meetings</option>
+            <option value="event">Events</option>
+            <option value="deadline">Deadlines</option>
+            <option value="review">Reviews</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="resource">Resources</option>
+            <option value="policy">Policy Updates</option>
+        </select>
+    </div>
+    <div class="notifications-container">
+        <!-- Notifications will be dynamically inserted here -->
+    </div>
+</div>
+
+
+            <!-- Messages -->
+<div id="messages" class="section">
+    <h2>Messages</h2>
+    <!-- Add messages details here -->
+    <p>Communicate with students and other teachers here.</p>
+
+    <!-- Message Form -->
+    <div class="message-form">
+        <h3>Send a New Message</h3>
+        <form id="message-form">
+            <label for="message-recipient">Recipient:</label>
+            <select id="message-recipient" required>
+                <option value="">Select Recipient</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="message-subject">Subject:</label>
+            <input type="text" id="message-subject" required />
+
+            <label for="message-body">Message:</label>
+            <textarea id="message-body" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Messages Display -->
+    <div class="messages-display">
+        <h3>Message History</h3>
+        <div id="message-list">
+            <!-- Messages will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+
+            
+<!-- Resources -->
+ 
+<div id="resources" class="section">
+    <h2>Resources</h2>
+    <p>Upload study materials and resources here.</p>
+    
+    <!-- Upload Form -->
+    <div class="upload-form">
+        <h3>Upload New Resource</h3>
+        <form id="upload-form">
+            <label for="resource-title">Title:</label>
+            <input type="text" id="resource-title" required />
+
+            <label for="resource-file">Select File:</label>
+            <input type="file" id="resource-file" accept=".pdf,.doc,.docx,.ppt,.pptx" required />
+
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <!-- Resources List -->
+    <div class="resources-list">
+        <h3>Uploaded Resources</h3>
+        <ul id="resources-list">
+            <!-- Uploaded resources will be dynamically added here -->
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="dashboard_scripts.js"></script>
+</body>
+</html>

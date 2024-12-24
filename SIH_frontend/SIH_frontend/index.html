@@ -1,0 +1,64 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="school-name">
+    <h1>XYZ School, Abcd</h1>
+</div>
+
+<div class="logins">
+    <div class="login-container">
+        <!-- Student Login -->
+        <div class="login-section" id="student-section">
+            <i class="fas fa-user-graduate login-icon"></i> <!-- Student Icon -->
+            <h2>Student Login</h2>
+            <form class="login-form" action="./Student_dashboard/student_dashboard.html" method="GET">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+                <a href="#" class="forgot-password" data-role="student">Forgot Password?</a>
+            </form>
+        </div>
+        
+        <!-- Teacher Login -->
+        <div class="login-section" id="teacher-section">
+            <i class="fas fa-chalkboard-teacher login-icon"></i> <!-- Teacher Icon -->
+            <h2>Teacher Login</h2>
+            <form class="login-form" action="./Teacher_dashboard/teacher_dashboard.html" method="GET">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+                <a href="#" class="forgot-password" data-role="teacher">Forgot Password?</a>
+            </form>
+        </div>
+        
+        <!-- Management Login -->
+        <div class="login-section" id="management-section">
+            <i class="fas fa-user-tie login-icon"></i> <!-- Management Icon -->
+            <h2>Management Login</h2>
+            <form class="login-form" action="./Management_dashboard/management_dashboard.html" method="GET">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+                <a href="#" class="forgot-password" data-role="management">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Forgot Password Modal -->
+<div id="forgotPasswordModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Password Recovery</h3>
+        <p>Enter your registered email to receive a password reset link.</p>
+        <input type="email" placeholder="Enter your email" required>
+        <button class="submit-btn">Send Reset Link</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Dashboard</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="management-dashboard">
+        <div class="sidebar">
+            <h2>Management Dashboard</h2>
+            <ul>
+                <li><a href="#dashboard-overview" class="nav-link">Dashboard Overview</a></li>
+                <li><a href="#staff-management" class="nav-link">Staff Management</a></li>
+                <li><a href="#student-management" class="nav-link">Student Management</a></li>
+                <li><a href="#finance" class="nav-link">Finance</a></li>
+                <li><a href="#complaints-feedback" class="nav-link">Complaints & Feedback</a></li>
+                <li><a href="#academic-calendar" class="nav-link">Academic Calendar</a></li>
+                <li><a href="#notifications" class="nav-link">Notifications</a></li>
+                <li><a href="#leave-requests" class="nav-link">Leave Requests</a></li>
+                <li><a href="#reports-analytics" class="nav-link">Reports & Analytics</a></li>
+            </ul>
+            <!-- Logout Button -->
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Dashboard Overview Section -->
+            <div id="dashboard-overview" class="section active">
+                <h2>Dashboard Overview</h2>
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <h3>Student Enrollment</h3>
+                        <p>Total Students: 1,200</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Teacher Performance</h3>
+                        <p>Average Rating: 4.5</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Overall Attendance</h3>
+                        <p>Attendance Rate: 92%</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Upcoming Events</h3>
+                        <p>Next Event: School Annual Day</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Leave Requests</h3>
+                        <p>3 pending requests</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Messages</h3>
+                        <p>2 unread messages</p>
+                    </div>
+                </div>
+            </div>
+
+            
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Staff Management Section -->
+<div id="staff-management" class="section">
+    <h2>Staff Management</h2>
+    <div class="staff-container">
+        <button id="add-staff-btn" class="btn">Add Staff</button>
+        <table id="staff-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample staff data -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Teacher</td>
+                    <td>Mathematics</td>
+                    <td>jane.smith@example.com</td>
+                    <td>+1234567890</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>John Doe</td>
+                    <td>Teacher</td>
+                    <td>Science</td>
+                    <td>john.doe@example.com</td>
+                    <td>+1098765432</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more sample rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add/Edit Staff Modal -->
+    <div id="staff-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Add Staff</h3>
+            <form id="staff-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <input type="hidden" id="row-index">
+                <button type="submit" class="btn">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<!-- Student Management Section -->
+
+<div id="student-management" class="section">
+    <h2>Student Management</h2>
+    <div class="student-container">
+        <input type="text" id="search-input" placeholder="Search students..." class="search-input">
+
+        <button id="add-student-btn" class="btn">Add Student</button>
+        
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Grade</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample student data -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>10</td>
+                    <td>Science</td>
+                    <td>jane.smith@example.com</td>
+                    <td>+1234567890</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>John Doe</td>
+                    <td>2</td>
+                    <td>Mathematics</td>
+                    <td>john.doe@example.com</td>
+                    <td>+1098765432</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more sample rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add/Edit Student Modal -->
+    <div id="student-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Add Student</h3>
+            <form id="student-form">
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student-name" required>
+
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" name="grade" required>
+
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="student-email">Email:</label>
+                <input type="email" id="student-email" name="student-email" required>
+
+                <label for="student-phone">Phone:</label>
+                <input type="text" id="student-phone" name="student-phone" required>
+
+                <input type="hidden" id="student-row-index">
+                <button type="submit" class="btn">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+            <!-- Finance Section -->
+            <div id="finance" class="section">
+                <h2>Finance</h2>
+                
+                <div class="finance-overview">
+                    <div class="finance-card">
+                        <h3>Total Income</h3>
+                        <p>$250,000</p>
+                    </div>
+                    <div class="finance-card">
+                        <h3>Total Expenses</h3>
+                        <p>$180,000</p>
+                    </div>
+                    <div class="finance-card">
+                        <h3>Pending Payments</h3>
+                        <p>$15,000</p>
+                    </div>
+                    <div class="finance-card">
+                        <h3>Net Balance</h3>
+                        <p>$70,000</p>
+                    </div>
+                </div>
+                
+                <div class="finance-form">
+                    <h3>Add Financial Record</h3>
+                    <form id="finance-form">
+                        <label for="finance-type">Type:</label>
+                        <select id="finance-type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        
+                        <label for="finance-amount">Amount:</label>
+                        <input type="number" id="finance-amount" required>
+                        
+                        <label for="finance-description">Description:</label>
+                        <input type="text" id="finance-description" required>
+                        
+                        <button type="submit">Add Record</button>
+                    </form>
+                </div>
+                
+                <div class="finance-records">
+                    <h3>Financial Records</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="finance-records-list">
+                            <!-- Financial records will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <!-- Complaints & Feedback Section -->
+            <div id="complaints-feedback" class="section">
+                <h2>Complaints & Feedback</h2>
+            
+                <!-- Filter Section -->
+                <div class="filter-container">
+                    <label for="filter-status">Filter by Status:</label>
+                    <select id="filter-status">
+                        <option value="all">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="resolved">Resolved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+            
+                <!-- Complaints & Feedback List -->
+                <div class="complaints-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="complaints-list">
+                            <!-- Complaints & Feedback will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <!-- Academic Calendar Section -->
+            <div id="academic-calendar" class="section">
+                <h2>Academic Calendar</h2>
+                <div class="calendar-navigation">
+                    <button id="prev-month">&lt;</button>
+                    <span id="current-month"></span>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar" id="calendar"></div>
+                </div>
+            
+                <div class="event-form">
+                    <h3>Add/Modify Event</h3>
+                    <form id="event-form">
+                        <label for="event-title">Title:</label>
+                        <input type="text" id="event-title" required>
+            
+                        <label for="event-date">Date:</label>
+                        <input type="date" id="event-date" required>
+            
+                        <label for="event-type">Type:</label>
+                        <select id="event-type">
+                            <option value="event">Event</option>
+                            <option value="holiday">Holiday</option>
+                        </select>
+            
+                        <button type="submit">Save Event</button>
+                    </form>
+                </div>
+            
+                <div class="event-list">
+                    <h3>Upcoming Events and Holidays</h3>
+                    <ul id="event-list">
+                        <!-- Events will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>            
+            
+
+            <!-- Notifications Section -->
+            <div id="notifications" class="section">
+                <h2>Notifications</h2>
+                <div class="notification-controls">
+                    <label for="category-filter">Filter by Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All</option>
+                        <option value="staff">Staff</option>
+                        <option value="students">Students</option>
+                        <option value="finance">Finance</option>
+                        <option value="events">Events</option>
+                        <option value="feedback">Complaints & Feedback</option>
+                    </select>
+                </div>
+                <div id="notification-list" class="notification-list">
+                    <!-- Notifications will be dynamically added here -->
+                </div>
+            </div>
+            
+
+            
+        <!-- Leave Requests Section -->
+<div id="leave-requests" class="section">
+    <h2>Leave Requests</h2>
+    <div class="leave-requests-container">
+        <table id="leave-requests-table">
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample leave request data -->
+                <tr>
+                    <td>LR12345</td>
+                    <td>John Doe</td>
+                    <td>Student</td>
+                    <td>Sick Leave</td>
+                    <td>2024-08-01</td>
+                    <td>2024-08-05</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>LR12345</td>
+                    <td>John Doe</td>
+                    <td>Student</td>
+                    <td>Sick Leave</td>
+                    <td>2024-08-01</td>
+                    <td>2024-08-05</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>LR12345</td>
+                    <td>John Doe</td>
+                    <td>Student</td>
+                    <td>Sick Leave</td>
+                    <td>2024-08-01</td>
+                    <td>2024-08-05</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+                <!-- Add more sample rows here -->
+            </tbody>
+        </table>
+    </div>
+            </div>
+
+            <!-- Reports & Analytics Section -->
+            <div id="reports-analytics" class="section">
+                <h2>Reports & Analytics</h2>
+            
+                <!-- Report Type Selector -->
+                <div class="report-selector">
+                    <label for="report-type">Select Report Type:</label>
+                    <select id="report-type">
+                        <option value="student-performance">Student Performance</option>
+                        <option value="teacher-performance">Teacher Performance</option>
+                        <option value="financial-overview">Financial Overview</option>
+                        <option value="attendance">Attendance Reports</option>
+                    </select>
+                </div>
+            
+                <!-- Charts Section -->
+                <div id="chart-container">
+                    <!-- Dynamic Chart Content -->
+                </div>
+            </div>
+            
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <script src="dashboard_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Student Dashboard</h2>
+        <ul>
+            <li><a href="#profile" class="nav-link">Student Profile</a></li>
+            <li><a href="#attendance" class="nav-link">Attendance</a></li>
+            <li><a href="#marks" class="nav-link">Marks</a></li>
+            <li><a href="#assignments" class="nav-link">Assignments</a></li>
+            <li><a href="#leave-application" class="nav-link">Leave Application</a></li>
+            <li><a href="#study-material" class="nav-link">Study Material</a></li>
+            <li><a href="#notifications" class="nav-link">Notifications</a></li>
+        </ul>
+        <!-- Logout Button -->
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+    
+
+<div class="content">
+
+<!-- profile section -->
+
+<div id="profile" class="section active">
+    <h2>Student Profile</h2>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="profile-photo.jpeg" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h3 class="profile-name">John Doe</h3>
+                <p class="profile-roll-no">Roll No: 123456</p>
+                <p class="profile-class">Class/Section: 10th Grade / A</p>
+                <p class="profile-age">Age: 16</p>
+                <p class="profile-dob">Date of Birth: 2008-01-01</p>
+                <p class="profile-email">Email ID: john.doe@example.com</p>
+                <p class="profile-address">Address: 123 Main Street, City</p>
+                <p class="profile-father-contact">Father's Contact: +1234567890</p>
+                <p class="profile-mother-contact">Mother's Contact: +0987654321</p>
+                <!-- Add more details if needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<!-- attendance section -->
+
+<div id="attendance" class="section">
+        <h2>Attendance</h2>
+        <div class="attendance-records">
+            <div class="subject">
+                <p><strong>Math:</strong> <span class="percentage">85%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>English:</strong> <span class="percentage">78%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 78%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>Science:</strong> <span class="percentage">90%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>History:</strong> <span class="percentage">82%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 82%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>Geography:</strong> <span class="percentage">88%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 88%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>Art:</strong> <span class="percentage">76%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 76%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>Physical Education:</strong> <span class="percentage">92%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 92%;"></div>
+                </div>
+            </div>
+            <div class="subject">
+                <p><strong>Music:</strong> <span class="percentage">80%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+</div>
+    
+<!-- Marks section -->
+
+<div id="marks" class="section">
+    <h2>Marks</h2>
+    <p>Here are your marks for various assessments.</p>
+    <div class="marks-records">
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Assignments</th>
+                    <th>Class Tests</th>
+                    <th>Midterm</th>
+                    <th>Final Exam</th>
+                    <th>Total Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>85</td>
+                    <td>78</td>
+                    <td>92</td>
+                    <td>88</td>
+                    <td>343</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>78</td>
+                    <td>82</td>
+                    <td>88</td>
+                    <td>76</td>
+                    <td>324</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>94</td>
+                    <td>89</td>
+                    <td>358</td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td>82</td>
+                    <td>80</td>
+                    <td>75</td>
+                    <td>81</td>
+                    <td>318</td>
+                </tr>
+                <tr>
+                    <td>Geography</td>
+                    <td>88</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>92</td>
+                    <td>355</td>
+                </tr>
+                <tr>
+                    <td>Art</td>
+                    <td>76</td>
+                    <td>78</td>
+                    <td>74</td>
+                    <td>80</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Physical Education</td>
+                    <td>92</td>
+                    <td>95</td>
+                    <td>98</td>
+                    <td>94</td>
+                    <td>379</td>
+                </tr>
+                <tr>
+                    <td>Music</td>
+                    <td>80</td>
+                    <td>82</td>
+                    <td>78</td>
+                    <td>84</td>
+                    <td>324</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- Assignments Section -->
+<div id="assignments" class="section">
+    <h2>Assignments</h2>
+    <p>View and submit your assignments here.</p>
+
+    <!-- Uploaded Assignments -->
+    <div class="uploaded-assignments">
+        <h3>Available Assignments</h3>
+        <div id="assignment-list">
+            <!-- Teacher's assignments will be dynamically added here -->
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Student Upload Assignment -->
+    <div class="student-upload">
+        <h3>Upload Your Assignment</h3>
+        <form id="student-upload-form">
+            <label for="student-file">Upload PDF:</label>
+            <input type="file" id="student-file" accept=".pdf" required>
+            
+            <button type="submit">Upload Assignment</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- leave application section -->
+
+<div id="leave-application" class="section">
+    <h2>Leave Application</h2>
+    <div id="leave-message" class="message" style="display: none;"></div>
+    <form id="leave-form">
+        <div class="form-group">
+            <label for="leave-type">Leave Type:</label>
+            <select id="leave-type" name="leave-type" required>
+                <option value="" disabled selected>Select Leave Type</option>
+                <option value="sick">Sick Leave</option>
+                <option value="personal">Personal Leave</option>
+                <option value="emergency">Emergency Leave</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Reason for Leave:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit Application</button>
+        </div>
+    </form>
+</div>
+
+
+
+ <!-- Study Material -->
+<div id="study-material" class="section">
+    <h2>Study Material</h2>
+    <p>Browse and download study materials uploaded by teachers.</p>
+
+    <!-- Study Material List -->
+    <div id="material-list" class="material-list">
+        <!-- Teacher's study materials will be dynamically added here -->
+    </div>
+</div>
+
+
+
+
+    <!-- Notifications -->
+<div id="notifications" class="section">
+    <h2>Notifications</h2>
+    <div class="filter-notifications">
+        <label for="notification-filter">Filter by Category:</label>
+        <select id="notification-filter">
+            <option value="">All</option>
+            <option value="assignment">Assignments</option>
+            <option value="exam">Exams</option>
+            <option value="event">School Events</option>
+            <option value="feedback">Feedback Requests</option>
+            <option value="attendance">Attendance</option>
+            <option value="maintenance">System Maintenance</option>
+            <option value="library">Library</option>
+            <option value="notice">Important Notices</option>
+        </select>
+    </div>
+    <div class="notifications-container">
+        <!-- Notifications will be dynamically inserted here -->
+    </div>
+</div>
+
+</div>
+    
+
+<script src="dashboard_script.js"></script>
+</body>
+</html>
